@@ -1,44 +1,37 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ThreeDeeWorld by adamschwartz</title>
+<head>
+    <title>ThreeDeeWorld Home</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>ThreeDeeWorld</h1>
-        <p>Make any website feel a little 3d</p>
-        <p class="view"><a href="https://github.com/adamschwartz/threedeeworld">View the Project on GitHub <small>adamschwartz/threedeeworld</small></a></p>
-        <ul>
-          <li><a href="https://github.com/adamschwartz/threedeeworld/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/adamschwartz/threedeeworld/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/adamschwartz/threedeeworld">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>ThreeDeeWorld</h3>
+    <!-- Dependencies -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
 
-<p>ThreeDeeWorld is pretty sweet. It takes simple HTML markup and makes it look all 3d.</p>
+    <!-- ThreeDeeWorld library -->
+    <script type="text/javascript" src="https://raw.github.com/adamschwartz/threedeeworld/master/jquery.threeDeeWorld.js"></script>
 
-<p>More to come...</p>
-
-<p><a href="https://github.com/adamschwartz" class="user-mention">@adamschwartz</a></p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/adamschwartz">adamschwartz</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <link href="https://raw.github.com/adamschwartz/threedeeworld/master/example/example.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(function(){
+            $('#viewport').threeDeeWorld({
+                worldSelector: '#world',
+                threeDeeSelector: 'h1, li',
+                clickAnimationTypes: ['li']
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="viewport">
+        <div id="world">
+            <h1>ThreeDeeWorld</h1>
+            <ul>
+                <li><a href="https://github.com/adamschwartz/threedeeworld/zipball/master">Download <strong>ZIP File</strong></a></li>
+                <li><a href="https://github.com/adamschwartz/threedeeworld/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                <li><a href="https://github.com/adamschwartz/threedeeworld">View On <strong>GitHub</strong></a></li>
+                <p>This project is maintained by <a href="https://github.com/adamschwartz">adamschwartz</a></p>
+            </ul>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</body>
 </html>
